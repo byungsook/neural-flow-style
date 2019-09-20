@@ -1,0 +1,3 @@
+[submodule "manta"]
+	path = manta
+	url = https://bitbucket.org/mantaflow/manta.git
