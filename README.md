@@ -18,7 +18,7 @@ This code is tested on Windows 10 and Ubuntu 16.04 with GTX 1080 (8GB) and the f
 
 Firstly, clone our code including mantaflow:
 
-    $ git clone --recurse-submodules https://gitlab.com/kimby/neural-flow-style.git
+    $ git clone --recurse-submodules https://gitlab.ethz.ch/cglsim/neural-flow-style.git
 
 Then run `setup.bat` or `setup.sh` for setup. (might need to change)
 
