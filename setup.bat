@@ -5,13 +5,29 @@ call .\venv\Scripts\activate
 pip install --upgrade pip
 
 REM install packages
-pip install --upgrade tensorflow-gpu==1.12 tqdm matplotlib Pillow imageio scipy scikit-image
+pip install --upgrade tensorflow==1.15 tqdm matplotlib Pillow imageio scipy scikit-image==0.14.2 open3d-python
 
-REM install mantaflow
-cd manta
-mkdir build
-cd build
+REM REM 1. mantaflow
+REM cd ..
+REM git clone https://bitbucket.org/mantaflow/manta.git
+REM cd manta
+REM git checkout 15eaf4
 
-cmake .. -G "Visual Studio 14 2015 Win64" -DNUMPY=ON -DOPENMP=ON
-call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" amd64
-devenv "MantaFlow.sln" /build Release
+REM REM 2. SPlisHSPlasH
+REM cd ..
+REM git clone https://github.com/InteractiveComputerGraphics/SPlisHSPlasH.git
+
+REM REM 3. partio
+REM cd ..
+REM git clone https://github.com/wdas/partio.git
+
+REM REM download freeglut (MSVC) for compiling partio
+REM https://www.transmissionzero.co.uk/files/software/development/GLUT/freeglut-MSVC.zip
+
+REM REM download swig for partio python-binding
+REM http://prdownloads.sourceforge.net/swig/swigwin-4.0.2.zip
+
+REM Note for partio compile
+REM Note1: uncheck BUILD_SHARED_LIBS
+REM Note2: remove None/None.lib; from Linker-Input of _partio PropertyPages.
+REM Note3: copy build/py/partio.py to build/py/Release
